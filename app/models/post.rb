@@ -11,7 +11,7 @@ class Post < ApplicationRecord
   end
 
   def self.update_all_with_audits(updates)
-    # return unless update_all(updates)
+    return unless update_all(updates)
     AuditBatch.new(self, updates).create
   end
 end

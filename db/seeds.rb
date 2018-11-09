@@ -8,3 +8,8 @@
 
 user = User.find_or_create_by(username: 'mattboldt', email: 'me@mattboldt.com')
 Post.create(user: user, title: 'Post title', status: :pending)
+
+
+5000.times do |i|
+  Post.create(user: user, title: 'Post title' + i.to_s, status: :pending)
+end

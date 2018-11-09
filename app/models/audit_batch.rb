@@ -15,9 +15,6 @@ class AuditBatch
       }
     end
 
-    binding.pry
-
-    audits
     Audited.audit_class.import(audits)
   end
 
